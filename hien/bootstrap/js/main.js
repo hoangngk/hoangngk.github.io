@@ -6,5 +6,4 @@ $(document).ready(function(){
 			scrollTop:$("#" + $(this).data('value')).offset().top
 		},1000)
 	})
-
 })

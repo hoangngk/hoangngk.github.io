@@ -10,6 +10,21 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Raleway";
 }
 
+.img-fluid{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.img-team{
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width:270px;
+	max-height:270px;
+}
+
+/* Navbar */
 .navbar{
 	background:#F97300;
 }
@@ -29,26 +44,12 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 }
 
-.img-fluid{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.img-team{
-	display: block;
-	width: 100%;
-	height: auto;
-	max-width:270px;
-	max-height:270px;
-}
-
 .navbar-collapse{
- justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .navbar-toggler{
-  background:#fff !important;
+	background:#fff !important;
 }
 
 /* Header */
@@ -262,72 +263,4 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-size: 16px;
 }
 
-/* Toggle Animation */
-.navbar-toggle {
-	border: medium none;
-	border-radius: 0;
-	color: #fff;
-	cursor: pointer;
-	height: 50px;
-	padding: 16px;
-	width: 50px;
-	float: right;
-	margin-top:0px;
-	margin-bottom:0px;
-}
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #fff;
-}
-
-.navbar-default .navbar-toggle, .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-	border-color: #fff;
-}
-
-.navbar-toggle span {
-	width: 25px;
-	height: 3px;
-	margin-bottom: 5px;
-	background-color: #222;
-	display: block;
-}
-.navbar-toggle span.bar1 {
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-ms-transform-origin: 1px 3px;
-	-webkit-transform-origin: 1px 3px;
-	-moz-transform-origin: 1px 3px;
-	-o-transform-origin: 1px 3px;
-	transform-origin: 1px 3px;
-	width: 31px;
-}
-.navbar-toggle span.bar2 {
-	-ms-transform: rotate(-360deg) scale(0);
-	-webkit-transform: rotate(-360deg) scale(0);
-	-moz-transform: rotate(-360deg) scale(0);
-	-o-transform: rotate(-360deg) scale(0);
-	transform: rotate(-360deg) scale(0);
-}
-
-.navbar-toggle span.bar3 {
-	-ms-transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	-ms-transform-origin:8px 2px;
-	-webkit-transform-origin: 8px 2px;
-	transform-origin: 8px 2px;
-	width: 31px;
-}
-.navbar-toggle.collapsed span.bar1,
-.navbar-toggle.collapsed span.bar2,
-.navbar-toggle.collapsed span.bar3,
-.navbar-toggle.collapsed span.bar4 {
-	-ms-transform: none;
-	-webkit-transform: none;
-	transform: none;
-	width: 30px;
-}
