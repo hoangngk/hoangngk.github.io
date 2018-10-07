@@ -29,6 +29,20 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 }
 
+.img-fluid{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.img-team{
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width:270px;
+	max-height:270px;
+}
+
 .navbar-collapse{
  justify-content: flex-end;
 }
@@ -56,10 +70,10 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 
 .description{
-    position: absolute;
-    top: 30%;
-    margin: auto;
-    padding: 2em;
+	position: absolute;
+	top: 30%;
+	margin: auto;
+	padding: 2em;
 
 }
 
@@ -91,17 +105,17 @@ html,h1,h2,h3,h4,h5,h6,a{
 	margin: 2em;
 }
 
-.about img{
-	height: 100%;
-    width: 100%;
-    border-radius: 50%
+.about p{
+	color:#888;
+	text-align: center;
+	padding-left: 15px;
 }
 
-.about span{
-	display: block;
-	color: #888;
-	position: absolute;
-	left: 115px;
+.about img{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	margin: 0 auto;
 }
 
 .about .desc{
@@ -116,17 +130,19 @@ html,h1,h2,h3,h4,h5,h6,a{
 .about .desc p{
 	line-height:2;
 	color:#888;
+	text-align: left;
 }
 
-.text-justify{
-	padding-top: 20px; 
-	padding-right: 20px;
+@media (max-width: 768px){
+	.about .desc{
+		margin-top: 60px;
+	}
 }
 
 /* Portfolio */
 .portfolio{
 	margin: 4em 0;
-    position: relative;	
+	position: relative;	
 }
 .portfolio h1{
 	color:#F97300;
@@ -158,7 +174,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	height: 12em;
 }
 
-@media and (max-width: 768px){
+@media (max-width: 768px){
 	.team .item img{
 		width: 100%;
 	}	
@@ -175,6 +191,13 @@ html,h1,h2,h3,h4,h5,h6,a{
 .team{
 	margin: 4em 0;
 	position: relative;
+}
+
+.team-img{
+	width: 100%;
+	height: auto;
+	max-width:270px;
+	max-height:270px;
 }
 
 .team h1{
@@ -195,13 +218,19 @@ html,h1,h2,h3,h4,h5,h6,a{
 	transition:.3s ease-in-out;
 	position: absolute;
 	width: 88%;
-	bottom: 24px;
+	bottom: 24px;	
+}
+
+@media (max-width: 768px){
+	.team .des{
+		margin-bottom: -24px;
+	}
 }
 
 .team .item:hover .des{
 	height: 100%;
 	background:#f973007d;
-    position: absolute;
+	position: absolute;
 	width: 89%;
 	padding: 5em;
 	top: 0;
@@ -231,4 +260,74 @@ html,h1,h2,h3,h4,h5,h6,a{
 .contact-form .right .form-control::placeholder{
 	color: #888;
 	font-size: 16px;
+}
+
+/* Toggle Animation */
+.navbar-toggle {
+	border: medium none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	height: 50px;
+	padding: 16px;
+	width: 50px;
+	float: right;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: #fff;
+}
+
+.navbar-toggle span {
+	width: 25px;
+	height: 3px;
+	margin-bottom: 5px;
+	background-color: #222;
+	display: block;
+}
+.navbar-toggle span.bar1 {
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-ms-transform-origin: 1px 3px;
+	-webkit-transform-origin: 1px 3px;
+	-moz-transform-origin: 1px 3px;
+	-o-transform-origin: 1px 3px;
+	transform-origin: 1px 3px;
+	width: 31px;
+}
+.navbar-toggle span.bar2 {
+	-ms-transform: rotate(-360deg) scale(0);
+	-webkit-transform: rotate(-360deg) scale(0);
+	-moz-transform: rotate(-360deg) scale(0);
+	-o-transform: rotate(-360deg) scale(0);
+	transform: rotate(-360deg) scale(0);
+}
+
+.navbar-toggle span.bar3 {
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-ms-transform-origin:8px 2px;
+	-webkit-transform-origin: 8px 2px;
+	transform-origin: 8px 2px;
+	width: 31px;
+}
+.navbar-toggle.collapsed span.bar1,
+.navbar-toggle.collapsed span.bar2,
+.navbar-toggle.collapsed span.bar3,
+.navbar-toggle.collapsed span.bar4 {
+	-ms-transform: none;
+	-webkit-transform: none;
+	transform: none;
+	width: 30px;
 }
