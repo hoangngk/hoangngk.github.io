@@ -6,4 +6,9 @@ $(document).ready(function(){
 			scrollTop:$("#" + $(this).data('value')).offset().top
 		},1000)
 	})
+
+	$('.navbar-collapse a:not(.dropdown-toggle)').click(function(){
+		if($(window).width() < 768 )
+			$('.navbar-collapse').collapse('hide');
+	});
 })

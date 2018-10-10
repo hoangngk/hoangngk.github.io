@@ -41,7 +41,10 @@ html,h1,h2,h3,h4,h5,h6,a{
 .nav-link:hover{
 	background: #f4f4f4;
 	color: #f97300;
+}
 
+.my-toggler {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .navbar-collapse{
@@ -49,14 +52,17 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 
 .navbar-toggler{
-	background:#fff !important;
+	display: block;
+}
+
+.navbar-collapse.collapse.in {
+	display: block!important;
 }
 
 /* Header */
 .header{
 	position: relative;
 	background-image: url('../images/headerback.jpg');
-
 	background-size: cover;
 	background-position: center;
 }
