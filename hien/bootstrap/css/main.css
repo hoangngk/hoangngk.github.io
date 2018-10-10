@@ -95,6 +95,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	color:#fff;
 }
 
+/* About */
 .about{
 	margin: 4em 0;
 	padding: 1em;
@@ -126,6 +127,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .about .desc h3{
 	color: #10828C;
+	padding-left: 15px;
 }
 
 .about .desc p{
