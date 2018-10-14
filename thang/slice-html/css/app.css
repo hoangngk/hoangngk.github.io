@@ -2,9 +2,20 @@
 	margin: 0;
 }
 
+@font-face {
+	font-family: Helvetica LT Std Roman;
+	src: url(../font/Helvetica\ LT\ Std\ Roman.otf)
+}
+
+@font-face {
+	font-family: Helvetica LT Std Bold;
+	src: url(../font/Helvetica\ LT\ Std\ Roman.otf)
+}
+
 body {
 	background-color: #ccc;
 }
+
 .page {
 	width: 960px;
 	margin: 0 auto;
@@ -20,6 +31,14 @@ body {
 #container {
 	width: 100%;
 	height: 850px;
+}
+
+h1, h2 {
+	font-family: Helvetica LT Std Bold;
+}
+
+p, h3, li, h4,  #footer {
+	font-family: Helvetica LT Std Roman;
 }
 
 img {
