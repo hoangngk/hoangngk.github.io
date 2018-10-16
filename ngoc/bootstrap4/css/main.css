@@ -1,58 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-body{
+body {
 	padding: 0;
 	margin: 0;
 	background:#f4f4f4;
 }
-html,h1,h2,h3,h4,h5,h6,a{
+html, h1, h2, h3, h4, h5, h6, a {
 	font-family: "Raleway";
 }
-.navbar{
-	background:#F97300;
-}
-.nav-link , .navbar-brand{
-	color: #f4f4f4;
-	cursor: pointer;
-}
-.nav-link{
-	margin-right: 1em !important;
-}
-.nav-link:hover{
-	background: #f4f4f4;
-	color: #f97300;
 
+.navbar-brand {
+  color: white;
 }
-.navbar-collapse{
- justify-content: flex-end;
+.nav-link {
+  color: white;
 }
-.navbar-toggler{
-  background:#fff !important;
+.navbar-toggler {
+  background-color: white;
 }
 
-/*header style*/
-.header{
-	position: relative;
-	background-image: url('../images/headerback.jpg');
+.header {
+  height: 657px;
+  background-image: url("../images/headerback.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-	background-size: cover;
-	background-position: center;
+.overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(244, 244, 244, 0.79);
 }
-.overlay{
-	position: absolute;
-	min-height: 100%;
-	min-width: 100%;
-	left: 0;
-	top: 0;
-	background: rgba(244, 244, 244, 0.79);
-}
+
 .description{
-    position: absolute;
-    top: 30%;
-    margin: auto;
-    padding: 2em;
-
+  position: absolute;
+  top: 30%;
+  margin: auto;
+  padding: 2em;
 }
+
 .description h1{
 	color:#F97300 ;
 }
@@ -62,43 +51,43 @@ html,h1,h2,h3,h4,h5,h6,a{
 	width: 50%;
 	line-height: 1.5;
 }
-.description button{
+.description button {
 	border:1px  solid #F97300;
 	background:#F97300;
 	color:#fff;
 }
-.about{
+
+.about-me{
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
 }
-.about h1{
+.about-me h1{
 	color:#F97300;
 	margin: 2em;
 }
-.about img{
+.about-me img{
 	height: 100%;
     width: 100%;
     border-radius: 50%
 }
-.about span{
+.about-me span{
 	display: block;
 	color: #888;
 	position: absolute;
 	left: 115px;
 }
-.about .desc{
+.about-me .desc{
 	padding: 2em;
 	border-left:4px solid #10828C;
 }
-.about .desc h3{
+.about-me .desc h3{
 	color: #10828C;
 }
-.about .desc p{
+.about-me .desc p{
 	line-height:2;
 	color:#888;
 }
-
 
 /*Portfolio*/
 .portfolio{
