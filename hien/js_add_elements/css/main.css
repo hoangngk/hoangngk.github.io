@@ -9,20 +9,32 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Open Sans";
 }
 
-input{
-	width: 70%;
-	height: 35px;
-	padding-bottom: 5px;
-}
-
-button{
-
-}
-
 h2{
 	font-size: 20px;
 	border: 1px solid rgba(0,0,0,.2);
 	border-radius: 0.5rem;
 	background:#efefef;
 	padding: 10px;
+	display: block;
+}
+
+input{
+	background: orange;
+	color: white;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 0.5rem;
+	padding: 8px;
+	margin-top: -7px;
+	float: right;
+	font-size: 16px;
+}
+
+#inputText{
+	width: 70%;
+	height: 35px;
+	background: white;
+	color: black;
+	padding-top: 3px;
+	float: none;
+	font-size: 18px;
 }

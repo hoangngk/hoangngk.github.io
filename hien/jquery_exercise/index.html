@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Todo List</title>
+		<link rel="icon" type="image/png" href="logo.png">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			// $(document).ready(function(){
+			// 	alert('Fully load');
+			// });
+
+			function SaySomething(){
+				// alert($('#username').val());
+				alert($('#username').val());
+			}
+
+			function DoSomething(){
+				// x = $('#username').val($('#password').val());
+				// $('#btnSay').click();
+				// $('#btnSay').hide();
+				// document.getElementById('btnSay').style.display='none';
+				$('#btnSay').toggle();
+			}
+		</script>
+
+	</head>
+	<body>
+		<form>
+			Username: </br>
+			<input type="text" id="username"></br>
+			Password:</br>
+			<input type="password" id="password">
+			<input type="button" id="btnSay" onclick="SaySomething()" value="Say Something" class="btn btn-primary">
+			<input type="button" onclick="DoSomething()" value="Do Something" class="btn btn-sucess">
+		</form>
+
+		<script type="text/javascript" src='js/main.js'></script>
+	</body>
+</html>

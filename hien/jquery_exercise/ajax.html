@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Todo List</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      // var i = 0;
+      function loadDoc() {
+        // var xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function() {
+        //   if (this.readyState == 4 && this.status == 200) {
+        //   document.getElementById("demo").innerHTML = this.responseText;
+        //   }
+        // };
+        // xhttp.open("GET", "ajax_info" + i++ + ".txt", true);
+        // xhttp.send();
+        // console.log(i);
+
+        $.get("ajax_info.txt", function(data, status){
+          document.getElementById('demo').innerHTML = data;
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <p id='demo'>Before calling AJAX</p>
+    <input type='button' onclick="loadDoc()" value="Call Ajax"/>    
+  </body>
+</html>
