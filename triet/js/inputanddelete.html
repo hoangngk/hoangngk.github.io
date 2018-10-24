@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise</title>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript">
+
+  		function Save () {
+  			var a = document.getElementById('demo');
+
+  			var c = document.createTextNode(a.value);
+  			var g = document.createElement('p');
+			g.setAttribute("id","text-zone");
+			g.appendChild(c);
+			document.body.appendChild(g);
+
+  			var btn = document.createElement("BUTTON");
+		    var t = document.createTextNode("Delete");
+		    btn.appendChild(t);
+		    document.body.appendChild(btn);
+		    
+		    btn.addEventListener('click', function() {
+			   this.style.display = 'none';
+			   g.style.display = 'none';
+
+			}, false);
+		    
+  		}
+    
+  	</script>
+
+</head>
+<body>
+
+	<input type="text" id="demo">
+	<input type="BUTTON"  onclick="Save()" value="Save data">
+</body>
+</html>

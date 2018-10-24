@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validate</title>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript">
+  		function validateForm() {
+		    var x = document.forms["myForm"]["email"].value;
+		    var y = document.forms["myForm"]["password"].value;
+		    var z = document.forms["myForm"]["password"];
+
+		    if (x == "") {
+		        alert("Email must be filled out");
+		        return false;
+		    }
+
+		    if (y == "") {
+		    	alert("Password must be filled out");
+		        return false;
+		    }
+
+		    if(z.value.length <= 8) {
+		    	alert("Password must be more than 8 elements");
+		        return false;
+		    }
+
+		    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x))
+			{
+			   return true;
+			}
+			else
+			{
+			   alert("You have entered an invalid email address!")
+			   return false;
+			}
+
+		}
+  	</script>
+</head>
+<body>
+	<form id="myForm" onsubmit="return validateForm()" method="post">
+		Email:
+		<input type="email" id="email">
+		PassWord:
+		<input type="password" id="password">
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>
