@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Todo List</title>
+		<link rel="icon" type="image/png" href="images/logo.png">
+
+		<!-- Import CSS -->	
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h2>Todos:</h2>
+			<ol>
+
+				<li v-for="todo in todos">
+					<label>
+						<input type="checkbox"
+							v-on:change="toggle(todo)"
+							v-bind:checked="todo.done">
+
+						<!-- <del v-if="todo.done">
+							{{ todo.text }}
+						</del>
+						<span v-else>
+							{{ todo.text }}
+						</span> -->
+
+						<span v-bind:style="{textDecoration: todo.done ? 'line-through' : ''}">
+							{{ todo.text }}
+						</span>
+					</label>
+				</li>
+			</ol>
+		</div>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>
