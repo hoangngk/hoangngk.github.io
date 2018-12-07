@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>TodoList</title>
+  <style>
+    body {
+      font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.4em;
+      background: #f5f5f5;
+      color: #4d4d4d;
+      min-width: 230px;
+      max-width: 550px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 300;
+    }
+
+    .header h1 {
+      position: absolute;
+      top: -155px;
+      width: 100%;
+      font-size: 100px;
+      font-weight: 100;
+      text-align: center;
+      color: rgba(175, 47, 47, 0.15);
+    }
+    .new-todo {
+      padding: 16px 16px 16px 60px;
+      border: none;
+      background: rgba(0, 0, 0, 0.003);
+      box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+      margin-top: 100px;
+    }
+    .new-todo, .edit {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      font-size: 24px;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: 1.4em;
+      border: 0;
+      color: inherit;
+      padding: 6px;
+      border: 1px solid #999;
+      box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+
+    .todoapp {
+      background: #fff;
+      margin: 130px 0 40px 0;
+      position: relative;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .info {
+      margin: 65px auto 0;
+      color: #bfbfbf;
+      font-size: 10px;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+
+    li span {
+      word-break: break-all;
+      padding: 15px 60px 15px 15px;
+      margin-left: 45px;
+      font-size: 24px;
+      line-height: 1.2;
+      transition: color 0.4s;
+    } 
+    
+    li input .toggle {
+      text-align: center;
+      width: 40px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      border: none;
+      -webkit-appearance: none;
+      appearance: none;
+  }
+
+    .filters {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">  
+    <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+          <input class="new-todo" autofocus autocomplete="off" type="text" class="new-todo" placeholder="What needs to be done?" v-model = 'newTodo' @keyup.enter= "addTodo">
+      </header>
+
+      <ul>
+        <li  v-for="todo in todos">
+          <input class="toggle" type="checkbox" v-model='todo.done'>
+          <span @dblclick="updateElement(todo)" v-bind:style="{ textDecorationLine: isDone(todo) }">{{ todo.text }}</span>
+          <button type="button" @click="removeElement(todo)">Delete</button>
+        </li>
+          <button type="button" @click="clearAll()">Clear All</button>
+      </ul>
+
+    
+    </section>
+  </div>
+
+  <footer class="info">
+    <p>Double-click to edit a todo</p>
+    <p>Written by <a href="http://evanyou.me">Evan You</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+  </footer>
+  <script type="text/javascript" src="js/todo.js"></script>      
+</body>
+</html>
