@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model='input'
+               type='number'>
+        <p>{{ number }}</p>
+        <button v-on:click="convert">Convert to digits</button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                input: '',
+                number: ''
+            },
+            methods: {
+                convert: function () {
+                    this.number = this.input.toString().split('').map(Number);
+                }
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>

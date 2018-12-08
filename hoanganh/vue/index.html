@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="task-list">
+    <form v-on:submit.prevent="addNewTask">
+      <label for="new-task">Add a Task</label>
+      <input v-model="newTaskText"
+             id="new-task">
+      <button>Add</button>
+    </form>
+    <ul>
+      <li v-for="(task, index) in tasks"
+          v-bind:key="task.id"
+          v-bind:title="task.title">
+        <label>
+          <input type="checkbox"
+                 v-on:change="toggle(task)">
+
+          <del v-if="task.done">
+            {{ task.title }}
+          </del>
+          <span v-else>
+            {{ task.title }}
+          </span>
+        </label>
+        <button v-on:click="deleteTask(index)">Remove</button>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
