@@ -8,7 +8,7 @@
   <title>VueJs</title>
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
@@ -16,23 +16,33 @@
 
 <body>
   <div id="app">
-    <h2>Todos:</h2>
-    <input v-model="newTodo"
-           v-on:keyup.enter="addTodo()">
-    <ul>
-      <li v-for="(todo, index) in todos">
-        <input type="checkbox"
-               v-on:change="toggle(todo)"
-               v-bind:checked="todo.done">
+    <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+        <input v-model="newTodo"
+            v-on:keyup.enter="addTodo()" class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?">
+      </header>
 
-        <span v-bind:style="{textDecoration: todo.done ? 'line-through' : ''}">{{ todo.text }}</span>
-        <!-- <label v-on:dblclick="editTodo(todo)">{{ todo.text }}</label> -->
-        <button v-on:click="removeTodo(index)">X</button>
-        <button v-on:click="editTodo(todo)">Edit</button>
-      </li>
-      <button v-on:click="clearAll()">Clear all</button>
+      <section class="main" v-show="todos.length">
+        <input class="toggle-all" type="checkbox" @click="allDone">
+        <ul class="todo-list">
+          <li v-for="(todo, index) in todos">
+            <div class="view">
+              <input type="checkbox" class="toggle"
+                    v-on:change="toggle(todo)"
+                    v-bind:checked="todo.done">
 
-    </ul>
+              <span v-bind:style="{textDecoration: todo.done ? 'line-through' : ''}">{{ todo.text }}</span>
+              <!-- <label v-on:dblclick="editTodo(todo)">{{ todo.text }}</label> -->
+              <button v-on:click="removeTodo(index)">X</button>
+              <button v-on:click="editTodo(todo)">Edit</button>
+            </div>
+          </li>
+          <button v-on:click="clearAll()">Clear all</button>
+
+        </ul>
+      </section>
+    </section>
   </div>
 
 </body>

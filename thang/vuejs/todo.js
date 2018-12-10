@@ -1,3 +1,8 @@
+Vue.component('todo-item', {
+  props: ['todo', 'index'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
 new Vue({
   el: '#app',
   data: {
@@ -42,6 +47,14 @@ new Vue({
     {
       for(var todo in this.todos)
         this.todos.splice(todo, this.todos.length)
+    },
+
+    allDone: function ()
+    {
+      for(var todo in this.todos)
+        todo.done = true
     }
   }
+    
+  
 })
