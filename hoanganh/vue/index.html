@@ -19,24 +19,12 @@
              id="new-task">
       <button>Add</button>
     </form>
-    <ul>
-      <li v-for="(task, index) in tasks"
-          v-bind:key="task.id"
-          v-bind:title="task.title">
-        <label>
-          <input type="checkbox"
-                 v-on:change="toggle(task)">
+    <task-item v-for="(task, index) in tasks"
+               v-bind:key="task.id"
+               v-bind:title="task.title"
+               v-on:remove="tasks.splice(index, 1)">
 
-          <del v-if="task.done">
-            {{ task.title }}
-          </del>
-          <span v-else>
-            {{ task.title }}
-          </span>
-        </label>
-        <button v-on:click="deleteTask(index)">Remove</button>
-      </li>
-    </ul>
+    </task-item>
   </div>
   <script src="script.js"></script>
 </body>

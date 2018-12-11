@@ -1,3 +1,15 @@
+Vue.component('task-item', {
+  template: '\
+    <ul>\
+      <li>\
+      	{{ title }}\
+        <button v-on:click="$emit(\'remove\')">Remove</button>\
+      </li>\
+    </ul>\
+  ',
+  props: ['title']
+})
+
 new Vue({
     el: '#task-list',
     data: {
@@ -10,16 +22,9 @@ new Vue({
       addNewTask: function () {
         this.tasks.push({
           id: this.nextTaskId++,
-          title: this.newTaskText,
-          done: false
+          title: this.newTaskText
         })
         this.newTaskText = ''
       },
-      toggle: function(task){
-          task.done = !task.done
-      },
-      deleteTask: function(index) {
-        this.tasks.splice(index, 1);
-  }
     }
   })
