@@ -1,0 +1,42 @@
+.container {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+.header {
+  font-size: 1.6rem;
+  height: 9.5rem;
+  background-color: $color_dark_grey;
+
+  &__logo {
+    margin: 2.5rem 2.2rem;
+  }
+}
+.content {
+  display: flex;
+}
+.sidebar {
+  background-color: $color_light_grey;
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.articles-view {
+  background-color: #fff;
+  flex: 1;
+}
+.footer {
+  background-color: $color_dark_grey;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-content {
+    font-size: 1.4rem;
+    color: $color-white;
+    &__brand-name {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+}

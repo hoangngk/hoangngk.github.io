@@ -1,0 +1,91 @@
+////////////////////////////////
+////  HEADER NAVIGATION
+
+.navigation {
+  background-color: $color_light_grey;
+  font-size: 1.6rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    cursor: pointer;
+    border-right: 1px solid $color_dark_grey;
+  }
+  &__item:hover {
+    background-color: $color_dark_grey;
+  }
+  &__link:link,
+  &__link:visited {
+    color: $color_white;
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 2rem;
+  }
+}
+////////////////////////////////
+////  SIDE NAVIGATION
+
+.sidebar {
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  background-color: $color_light_grey-2;
+  &__item {
+    &-title {
+      font-size: 1.8rem;
+      color: $color-black;
+      font-weight: bold;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #bbbbbb;
+    }
+  }
+  &-nav {
+    &__item {
+      margin-left: 1rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      color: $color_primary;
+    }
+  }
+}
+////////////////////////////////
+////  ARTICLE ITEM
+
+.article-item {
+  background-color: $color-white;
+  padding: 4rem 2rem;
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+  &__thumbnail {
+    height: 16rem;
+    min-width: 16rem;
+    background-color: #dddddd;
+    margin-right: 2rem;
+  }
+  .article-content {
+    &__title {
+      font-size: 2.4rem;
+      color: black;
+      font-weight: bold;
+      padding-bottom: 1.5rem;
+    }
+    &__desc {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    &__read-more-link {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-primary;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 1rem 0;
+    }
+  }
+}
