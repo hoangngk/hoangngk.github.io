@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ex1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const matches = (obj, source) =>
+  Object.keys(source).every(key => obj.hasOwnProperty(key) && obj[key] === source[key]);
+  console.log(matches({ age: 25, firstName: 'Thang', lastName: 'Dang' }, { firstName: 'Thang', lastName: 'Dang' })); // true
+  console.log(matches({ firstName: 'Thang', lastName: 'Dang' }, { age: 25, firstName: 'Thang', lastName: 'Dang' })); // false
+  console.log(matches({ firstName: 'Thang', lastName: 'Dang' }, { age: 26, firstName: 'Thang', lastName: 'Dang' })); // false
+  console.log('Thanks for watching..');
+  </script>
+</head>
+<body>
+  <p>Open console log to see the result</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Create a new array out of the two supplied by creating each possible pair from the arrays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const xProd = (a, b) => a.reduce((acc, x) => acc.concat(b.map(y => [x, y])), []);
+  console.log(xProd([1, 2], ['a', 'b']));
+  console.log(xProd([1, 2], [1, 2]));
+  console.log(xProd(['a', 'b'], ['a', 'b']));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

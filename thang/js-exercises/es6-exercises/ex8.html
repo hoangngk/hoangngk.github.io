@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Filter out the specified values from an specified array</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const pull = (arr, ...args) => {
+    let argState = Array.isArray(args[0]) ? args[0] : args;
+    let pulled = arr.filter((v, i) => !argState.includes(v));
+    arr.length = 0;
+    pulled.forEach(v => arr.push(v));
+    return pulled;
+  };
+  let arra1 = ['a', 'b', 'c', 'a', 'b', 'c'];
+  console.log(pull(arra1, 'a', 'c'));
+  let arra2 =  ['a', 'b', 'c', 'a', 'b', 'c'];
+  console.log(pull(arra2, 'b'));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

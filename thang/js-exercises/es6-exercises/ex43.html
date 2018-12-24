@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Change function that accepts an array into a variadic function</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const collectInto = fn => (...args) => fn(args);
+  const Pall = collectInto(Promise.all.bind(Promise));
+  let p1 = Promise.resolve(1);
+  let p2 = Promise.resolve(2);
+  let p3 = new Promise(resolve => setTimeout(resolve, 2000, 3));
+  Pall(p1, p2, p3).then(console.log);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
