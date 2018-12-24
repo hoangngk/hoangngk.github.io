@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Return true if the string is y/yes other wise false</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const yes_No = (val, def = false) =>
+    /^(y|yes)$/i.test(val) ? true : /^(n|no)$/i.test(val) ? false : def;
+  console.log(yes_No('Y')); 
+  console.log(yes_No('yes'));  
+  console.log(yes_No('No')); 
+  console.log(yes_No('Foo', true));  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

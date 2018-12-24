@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Retrieve a set of properties indicated by the given selectors from an object</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const get = (from, ...selectors) =>
+  [...selectors].map(s =>
+    s
+      .replace(/\[([^\[\]]*)\]/g, '.$1.')
+      .split('.')
+      .filter(t => t !== '')
+      .reduce((prev, cur) => prev && prev[cur], from)
+  );
+  const obj = { selector: { to: { val: 'val to select' } }, target: [1, 2, { a: 'test' }] };
+
+  console.log(get(obj, 'selector.to.val', 'target[0]', 'target[2].a')); 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

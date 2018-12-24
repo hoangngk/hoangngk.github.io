@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Convert the length of a given string in bytes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const byte_Size = str => new Blob([str]).size;
+  console.log(byte_Size('123456'));  
+  console.log(byte_Size('Hello World'));  
+  console.log(byte_Size('Ã¢')); 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
