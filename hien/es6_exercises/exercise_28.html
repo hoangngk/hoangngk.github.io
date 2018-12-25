@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 28</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const time_taken = callback => {
+    const result = callback();
+      return result;
+    };
+    console.log("Time taken: " + time_taken(() => Math.pow(2, 10))+" ms"); 
+    console.log("Time taken: " + time_taken(() => Math.sqrt(225))+" ms");
+    console.log("Time taken: " + time_taken(() => Math.sqrt((5 * 5) + (6 * 6)))+" ms");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

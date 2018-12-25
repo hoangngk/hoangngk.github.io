@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 42</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const coalesceFactory = valid => (...args) => args.find(valid);
+    const customCoalesce = coalesceFactory(_ => ![null, undefined, '', NaN].includes(_));
+    console.log(customCoalesce(undefined, null, NaN, '', 'Waldo'));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

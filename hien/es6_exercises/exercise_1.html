@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script>
+    const matches = (object, source) =>
+    Object.keys(source).every(key => object.hasOwnProperty(key) && object[key] === source[key]);
+    console.log(matches({ age: 20, firstName: 'Hien', lastName: 'Ngo' }, { firstName: 'Hien', lastName: 'Ngo' }));  // true
+    console.log(matches({ firstName: 'Hien', lastName: 'Ngo' }, { age: 25, firstName: 'Hien', lastName: 'Ngo' }));  // false
+    console.log(matches({ firstName: 'Hien', lastName: 'Ngo' }, { age: 26, firstName: 'Hien', lastName: 'Ngo' }));  // false
+  </script>
+
+</head>
+<body>
+  <p>See the result via the Console log</p>
+</body>
+</html>

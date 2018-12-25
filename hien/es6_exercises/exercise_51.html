@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 51</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const get_URL_Parameters = url =>
+      (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+        (a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a),
+        {}
+      );
+    console.log(get_URL_Parameters('http://url.com/page?name=Adam&surname=Smith')); 
+    console.log(get_URL_Parameters('google.com'));
+    console.log(get_URL_Parameters('https://www.startupocompany.com'));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 52</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const group_By = (arr, fn) =>
+	  arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val, i) => {
+	    acc[val] = (acc[val] || []).concat(arr[i]);
+	    return acc;
+	  }, {});
+	console.log(group_By([6.1, 4.2, 6.3], Math.sqrt)); 
+	console.log(group_By([6.1, 4.2, 6.3], Math.floor)); 
+	console.log(group_By(['one', 'two', 'three'], 'length'));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

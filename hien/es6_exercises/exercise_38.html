@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 38</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const pad = (str, length, char = ' ') =>
+    str.padStart((str.length + length) / 2, char).padEnd(length, char);
+    console.log(pad('cat', 8));
+    console.log(pad(String(42), 6, '0'))
+    console.log(pad('foobar', 3))
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

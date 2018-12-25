@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 41</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const object_From_Pairs = arr => arr.reduce((a, v) => ((a[v[0]] = v[1]), a), {});
+    console.log(object_From_Pairs([['a', 1], ['b', 2]])); 
+    console.log(object_From_Pairs([[1, 10], [2, 20], [3, 30]]));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

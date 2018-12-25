@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise 23</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const filter_Non_UniqueBy = (arr, fn) =>
+    arr.filter((v, i) => arr.every((x, j) => (i === j) === fn(v, x, i, j)));
+
+    console.log(filter_Non_UniqueBy(
+      [
+        { id: 0, value: 'a' },
+        { id: 1, value: 'b' },
+        { id: 2, value: 'c' },
+        { id: 1, value: 'd' },
+        { id: 0, value: 'e' }
+      ],
+      (a, b) => a.id == b.id
+    )); 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
