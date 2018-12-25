@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Compare two objects to determine if the first one contains equivalent property values to the second one</h2>
+    <h3>
+        Result in console.log
+    </h3>
+    <script>
+        const matches = (obj, source) => Object.keys(source).every(key => obj.hasOwnProperty(key) && obj[key] === source[key]);
+        console.log(matches({ age: 25, hair: 'long', beard: true }, { hair: 'long', beard: true }));
+        console.log(matches({ hair: 'long', beard: true }, { age: 25, hair: 'long', beard: true }));
+    </script>
+</body>
+</html>

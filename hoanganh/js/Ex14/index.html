@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Replace the names of multiple object keys with the values provided</h2>
+    <script>
+        const rename_keys = (keysMap, obj) =>
+            Object.keys(obj).reduce(
+                (acc, key) => ({
+                    ...acc,
+                    ...{ [keysMap[key] || key]: obj[key] }
+                }),
+                {}
+            );
+        const obj = { name: 'Bobo', job: 'Programmer', shoeSize: 100 };
+        console.log("Original Object");
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>

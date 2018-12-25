@@ -1,0 +1,13 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+<body>
+    <h2>Removes non-printable ASCII characters from a given string</h2>
+    <script>
+        const remove_non_ASCII = str => str.replace(/[^\x20-\x7E]/g, '');
+        console.log(remove_non_ASCII('äÄçÇéÉêw3resouröceÖÐþúÚ'));
+    </script>
+</body>
+</html>

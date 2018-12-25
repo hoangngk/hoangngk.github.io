@@ -1,0 +1,12 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Combine the numbers of a given array into an array containing all combinations</title>
+</head>
+<body>
+    <script>
+        const powerset = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r))), [[]]);
+console.log(powerset([1, 2]));
+    </script>
+</body>
+</html>
