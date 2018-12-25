@@ -7,6 +7,7 @@ $(function() {
 			},
 			password: {
 				required: true,	
+				minlength: 8,
 			}
 		},
 		
