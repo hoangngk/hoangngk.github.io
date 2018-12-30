@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Exercise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script type="text/javascript" >
+  function myFunction()
+  {
+    var inputJob = document.getElementById("myJob").value;
+    
+    var li = document.createElement("li");
+    var t = document.createTextNode(inputJob);
+    li.appendChild(t);
+    if (inputJob === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("result").appendChild(li);
+    }
+    document.getElementById("myJob").value = "";
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+    
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }     
+  }
+
+  </script>
+</head>
+<body>
+    <input type="text" id="myJob" name="job">
+    <input type="submit"  onclick="myFunction()">
+  <br>
+  
+  <div>
+    <ui id="result">
+ 
+    </ui>
+    
+  </div>
+  
+  <!-- <script src="main.js"></script> -->
+  
+</body>
+</html>

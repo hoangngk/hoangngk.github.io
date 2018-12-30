@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Create a function that invokes each provided function with the arguments it receives and returns the results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const over = (...fns) => (...args) => fns.map(fn => fn.apply(null, args));
+  const minMax = over(Math.min, Math.max);
+  console.log(minMax(1, 2, 3, 4, 5)); 
+  console.log(minMax(1, 2, 5, 4, 3)); 
+  console.log(minMax(1, 2, 5, -4, 3));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

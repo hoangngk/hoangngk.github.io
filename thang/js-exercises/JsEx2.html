@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercise 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <style>
+    #result {
+      color: red;
+    }
+    </style>
+    <script type="text/javascript" >
+      function myFunction()
+      {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var result = document.getElementById("result");
+        var atposition=email.indexOf("@");  
+        var dotposition=email.lastIndexOf(".");  
+        if(!email || !password)
+        {
+          result.innerHTML = "Email or password cannot be blank!";
+        }
+        else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length)
+        {
+          result.innerHTML = "Wrong format of email!";
+        }
+        else if (password.length < 6)
+          result.innerHTML = "Password must be at least 6 characters long."; 
+        else{
+          result.style.color = "blue";
+          result.innerHTML = "Bingo!"; 
+        }
+          
+      }
+    </script>
+  </head>
+  <body>
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="Email">
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Password">
+    <input type="submit"  onclick="myFunction()">
+    <div>
+      <p id="result"></p>
+    </div>
+    
+  </body>
+</html>

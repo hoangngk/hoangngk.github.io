@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Remove the key-value pairs corresponding to the given keys from an object</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const omit = (obj, arr) =>
+  Object.keys(obj)
+    .filter(k => !arr.includes(k))
+    .reduce((acc, key) => ((acc[key] = obj[key]), acc), {});
+
+  console.log(omit({ a: 1, b: '2', c: 3 }, ['b']));
+  console.log(omit({ a: 1, b: 2, c: 3 }, ['c']));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

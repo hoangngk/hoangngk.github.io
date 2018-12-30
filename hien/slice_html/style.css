@@ -1,0 +1,160 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.group:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body{
+	background: #cccccc;
+	font-family: Helvetica, Arial, Sans-serif;
+	line-height: 1.5em;
+	font-size: 14px;
+	color: #666666;
+}
+
+a{
+	color: #f58220;
+	text-decoration: none;
+}
+
+a:hover, a:focus{
+	color: #d7721c;
+	text-decoration: underline;
+}	
+
+#main-wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+header{
+	background: #333333;
+	padding: 30px 0 0 0px;
+}
+
+.logo a{
+	display: block;
+	width: 133px;
+	height: 46px;
+	background: url(images/logo.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	margin: 0 0 25px 20px;
+}
+
+.link{
+	color: white;
+}
+
+.primary ul{
+	background: #666666;
+}
+
+.primary ul li{
+	float: left;
+	border-right: 1px solid #333333;
+}
+
+.primary ul li a{
+	display: block;
+	padding: 15px 20px;
+	color: $fff;
+	text-decoration: none;
+}
+
+.primary ul li a:hover{
+	background: #777777;
+}
+
+.content-wrap{
+	background: #e5e5e5;
+}
+
+#main-content{
+	background: #ffffff;
+	float: left;
+	width: 660px;
+	padding: 40px 20px;
+}
+
+.thumbnail{
+	float: left;
+	margin-right: 20px;
+}
+
+.posts{
+	clear: both;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.posts div{
+	overflow: hidden;
+}
+
+.posts h1 a{
+	font-size: 24px;
+	color: #333333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.posts h1 a:hover{
+	color: #f58220;
+}
+
+.posts p{
+	padding: 10px 0 20px 0;
+}
+
+.posts .more{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+aside{
+	width: 300px;
+	background: #e5e5e5;
+	float: right;
+	padding: 40px 20px;
+}
+
+.side-box{
+	margin-bottom: 40px;
+}
+
+.side-box ul{
+	margin-left: 10px;
+}
+
+.side-box ul li{
+	margin-bottom: 10px;
+}
+
+.sidebar-heading{
+	font-size: 18px;
+	font-weight: bold;
+	color: #333333;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+footer{
+	clear: both;
+	background: #333333;
+	padding: 18px 0;
+	text-align: center;
+}
+
+footer small{
+	color: #cccccc;
+	font-size: 12px;
+}
