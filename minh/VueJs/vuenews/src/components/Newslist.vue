@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     updateSource: function (source) {
-      this.$http.get('https://newsapi.org/v1/articles?source=' + source + '&apiKey=[Place your Newsapi.org API key here]')
+      this.$http.get('https://newsapi.org/v1/articles?source=' + source + '&apiKey=be9ba6c93c234c95a68b568ebe09f889')
        .then(response => {
          this.articles = response.data.articles;
        });   
