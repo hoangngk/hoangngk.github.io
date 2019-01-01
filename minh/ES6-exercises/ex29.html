@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Convert a value to a safe integer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script>
+  const to_Safe_Integer = num =>
+  Math.round(Math.max(Math.min(num, Number.MAX_SAFE_INTEGER), Number.MIN_SAFE_INTEGER));
+  console.log(to_Safe_Integer('5.2'));
+  console.log(to_Safe_Integer('5.52'));
+  console.log(to_Safe_Integer(Infinity)); 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
